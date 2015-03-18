@@ -1,12 +1,12 @@
 ﻿module objects {
-    // OCEAN CLASS
-    export class Ocean extends createjs.Bitmap {
-        // PUBLIC INSTANCE VARIABLES
-        private _dy: number = 5;
+    // ISLAND CLASS
+    export class Island extends objects.GameObject{
 
         // CONSTRUCTOR
         constructor() {
-            super(assetLoader.getResult("ocean"));
+            super("island");
+            this.sound = "yay";
+            this._dy = 5;
 
             this.reset();
         }
@@ -20,18 +20,18 @@
 
         // Reset position of island to the top
         public reset() {
-            this.x = 480;
-            this.y = 0;
+            this.x = 640 - this.width;
+            this.y = Math.floor(Math.random() * 640);
         }
 
         // PRIVATE METHODS +++++++++++++++++++++++++++++++++++++++++
         private _checkBounds() {
             // check if island has left the bottom of the screen
-            if (this.x === 0) {
+            if (this.x <= 0) {
                 this.reset();
             }
         }
 
     }
 
-}  
+} 
