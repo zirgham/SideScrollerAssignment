@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -19,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,6 +59,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Scripts\objects\cloud.js.map" />
+    <Content Include="Scripts\objects\gameobject.js.map" />
+    <Content Include="Scripts\objects\island.js.map" />
+    <Content Include="Scripts\objects\ocean.js.map" />
+    <Content Include="Scripts\objects\plane.js.map" />
+    <Content Include="assets\images\Thumbs.db" />
+    <Content Include="assets\audio\engine.ogg" />
+    <Content Include="assets\audio\thunder.ogg" />
+    <Content Include="assets\audio\yay.ogg" />
+    <Content Include="Scripts\game.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -65,16 +78,56 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\images\1945.bmp" />
+    <Content Include="assets\images\cloud.png" />
+    <Content Include="assets\images\island.png" />
+    <Content Include="assets\images\ocean.gif" />
+    <Content Include="assets\images\plane.png" />
+    <Content Include="assets\images\sideplane.gif" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\game.js" />
+    <Content Include="Scripts\lib\easeljs-0.8.0.min.js" />
+    <Content Include="Scripts\lib\preloadjs-0.6.0.min.js" />
+    <Content Include="Scripts\lib\soundjs-0.6.0.min.js" />
+    <Content Include="Scripts\lib\tweenjs-0.6.0.min.js" />
+    <Content Include="Scripts\objects\cloud.js" />
+    <Content Include="Scripts\objects\gameobject.js" />
+    <Content Include="Scripts\objects\island.js" />
+    <Content Include="Scripts\objects\ocean.js" />
+    <Content Include="Scripts\objects\plane.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\fonts\" />
+    <Folder Include="css\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\game.ts" />
+    <TypeScriptCompile Include="Scripts\objects\cloud.ts" />
+    <TypeScriptCompile Include="Scripts\objects\gameobject.ts" />
+    <TypeScriptCompile Include="Scripts\objects\island.ts" />
+    <TypeScriptCompile Include="Scripts\objects\ocean.ts" />
+    <TypeScriptCompile Include="Scripts\objects\plane.ts" />
+    <TypeScriptCompile Include="Scripts\typings\createjs-lib\createjs-lib.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\easeljs\easeljs.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\preloadjs\preloadjs.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\soundjs\soundjs.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\tweenjs\tweenjs.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\webaudioapi\waa.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\webrtc\MediaStream.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\webrtc\RTCPeerConnection.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
