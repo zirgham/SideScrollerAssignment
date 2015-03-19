@@ -13,14 +13,14 @@
 
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++
         public update() {
-            this.x -= this._dy;
+            this.x += this._dy;
 
             this._checkBounds();
         }
 
         // Reset position of island to the top
         public reset() {
-            this.x = 480;
+            this.x = -1200;
             this.y = 0;
         }
 

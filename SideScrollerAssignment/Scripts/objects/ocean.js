@@ -18,12 +18,12 @@ var objects;
         }
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++
         Ocean.prototype.update = function () {
-            this.x -= this._dy;
+            this.x += this._dy;
             this._checkBounds();
         };
         // Reset position of island to the top
         Ocean.prototype.reset = function () {
-            this.x = 480;
+            this.x = -1200;
             this.y = 0;
         };
         // PRIVATE METHODS +++++++++++++++++++++++++++++++++++++++++

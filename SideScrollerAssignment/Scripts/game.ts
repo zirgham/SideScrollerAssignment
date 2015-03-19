@@ -31,7 +31,7 @@ var manifest = [
     { id: "cloud", src: "assets/images/cloud.png" },
     { id: "island", src: "assets/images/island.png" },
     { id: "ocean", src: "assets/images/ocean.jpg" },
-    { id: "plane", src: "assets/images/plane.png" },
+    { id: "plane", src: "assets/images/spaceship.jpg" },
     { id: "engine", src: "assets/audio/engine.ogg" },
     { id: "yay", src: "assets/audio/yay.ogg" },
     { id: "thunder", src: "assets/audio/thunder.ogg" }

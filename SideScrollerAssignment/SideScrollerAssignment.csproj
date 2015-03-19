@@ -85,6 +85,7 @@
     <Content Include="assets\images\ocean.gif" />
     <Content Include="assets\images\plane.png" />
     <Content Include="assets\images\sideplane.gif" />
+    <Content Include="assets\images\spaceship.jpg" />
     <Content Include="index.html" />
     <Content Include="Scripts\game.js" />
     <Content Include="Scripts\lib\easeljs-0.8.0.min.js" />
