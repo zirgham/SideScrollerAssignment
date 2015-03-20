@@ -13,17 +13,17 @@ var objects;
         function Ocean() {
             _super.call(this, assetLoader.getResult("ocean"));
             // PUBLIC INSTANCE VARIABLES
-            this._dy = 5;
+            this._dx = 5;
             this.reset();
         }
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++
         Ocean.prototype.update = function () {
-            this.x += this._dy;
+            this.x += this._dx;
             this._checkBounds();
         };
         // Reset position of island to the top
         Ocean.prototype.reset = function () {
-            this.x = -1200;
+            this.x = -3000;
             this.y = 0;
         };
         // PRIVATE METHODS +++++++++++++++++++++++++++++++++++++++++

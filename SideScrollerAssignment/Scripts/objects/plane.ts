@@ -11,11 +11,11 @@ module objects {
             this.width = this.getBounds().width;
             this.height = this.getBounds().height;
 
-            this.y = 430;
-            this.x = this.width-10;
+            this.y = 320;
+            this.x = 850;
             this.regX = this.width * 0.5;
             this.regY = this.height * 0.5;
-            createjs.Sound.play("engine", {loop: -1});
+            createjs.Sound.play("engine", { loop: -1 });
         }
 
         // PUBLIC METHODS

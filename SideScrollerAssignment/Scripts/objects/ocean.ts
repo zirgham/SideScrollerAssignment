@@ -2,7 +2,7 @@
     // OCEAN CLASS
     export class Ocean extends createjs.Bitmap {
         // PUBLIC INSTANCE VARIABLES
-        private _dy: number = 5;
+        private _dx: number = 5;
 
         // CONSTRUCTOR
         constructor() {
@@ -13,14 +13,14 @@
 
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++
         public update() {
-            this.x += this._dy;
+            this.x += this._dx;
 
             this._checkBounds();
         }
 
         // Reset position of island to the top
         public reset() {
-            this.x = -1200;
+            this.x = -3000;
             this.y = 0;
         }
 
