@@ -31,10 +31,10 @@ var gamePlay;
 var gameOver;
 var menu;
 var manifest = [
-    { id: "cloud", src: "assets/images/carTraffic.png" },
+    { id: "cloud", src: "assets/images/cloud.png" },
     { id: "island", src: "assets/images/island.png" },
-    { id: "ocean", src: "assets/images/road.png" },
-    { id: "plane", src: "assets/images/car.png" },
+    { id: "ocean", src: "assets/images/wall.jpg" },
+    { id: "plane", src: "assets/images/spaceship.gif" },
     { id: "playButton", src: "assets/images/playButton.png" },
     { id: "tryAgainButton", src: "assets/images/tryAgainButton.png" },
     { id: "engine", src: "assets/audio/engine.ogg" },

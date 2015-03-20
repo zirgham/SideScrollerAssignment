@@ -91,6 +91,7 @@
     <Content Include="assets\images\sideplane.gif" />
     <Content Include="assets\images\spaceship.jpg" />
     <Content Include="assets\images\tryAgainButton.png" />
+    <Content Include="assets\images\wall.jpg" />
     <Content Include="index.html" />
     <Content Include="Scripts\constants.js" />
     <Content Include="Scripts\game.js" />
